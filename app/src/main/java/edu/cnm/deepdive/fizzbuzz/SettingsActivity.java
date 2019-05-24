@@ -3,6 +3,8 @@ package edu.cnm.deepdive.fizzbuzz;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.SeekBarPreference;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -22,6 +24,10 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
       setPreferencesFromResource(R.xml.preferences, rootKey);
+      PreferenceScreen screen = getPreferenceScreen();
+      SeekBarPreference numDigits =
+          (SeekBarPreference) screen.findPreference(getString(R.string.num_digits_key));
+      numDigits.setMin(1);
     }
   }
 }
