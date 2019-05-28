@@ -8,7 +8,9 @@
 
   <integer name="game_time_min">30</integer>
   <integer name="game_time_default">120</integer>
+  <integer name="game_time_increment">15</integer>
   <integer name="game_time_max">300</integer>
+
 
 
 </resources>
